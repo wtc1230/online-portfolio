@@ -722,43 +722,6 @@ main {
 }
 
 
-/**
- * #clients 
- */
-
-.clients { margin-bottom: 15px; }
-
-.clients-list {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 15px;
-  margin: 0 -15px;
-  padding: 25px;
-  padding-bottom: 25px;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  overscroll-behavior-inline: contain;
-  scroll-snap-type: inline mandatory;
-  scroll-padding-inline: 25px;
-}
-
-.clients-item {
-  min-width: 50%;
-  scroll-snap-align: start;
-}
-
-.clients-item img {
-  width: 100%;
-  filter: grayscale(1);
-  transition: var(--transition-1);
-}
-
-.clients-item img:hover { filter: grayscale(0); }
-
-
-
-
 
 /*-----------------------------------*\
   #RESUME
@@ -956,11 +919,13 @@ main {
 .project-img {
   position: relative;
   width: 100%;
-  height: 200px;
+  height: 100%;
   border-radius: 16px;
   overflow: hidden;
   margin-bottom: 15px;
 }
+
+
 
 .project-img::before {
   content: "";
@@ -1001,8 +966,8 @@ main {
 .project-item-icon-box ion-icon { --ionicon-stroke-width: 50px; }
 
 .project-img img {
-  width: 100%;
-  height: 100%;
+  width: auto;
+  height: 500px;
   object-fit: cover;
   transition: var(--transition-1);
 }
@@ -1425,9 +1390,16 @@ textarea.form-input::-webkit-resizer { display: none; }
   .testimonials-avatar-box {
     transform: translate(30px, -30px);
     border-radius: 20px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  .testimonials-avatar-box img { width: 80px; }
+  .testimonials-avatar-box img { 
+    width: 60px;
+  }
 
   .testimonials-item-title {
     margin-bottom: 10px;
